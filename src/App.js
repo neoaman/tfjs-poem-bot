@@ -75,7 +75,7 @@ function App() {
             ? wordIndex[t.toLowerCase()]
             : 0
         );
-        var inputStr = Array(14 - tok.length)
+        var inputStr = Array(wordToken["max_seq_len"] - 1 - tok.length)
           .fill(0)
           .concat(tok);
         const prediction = nlpModel
