@@ -50,17 +50,17 @@ function App() {
   } = useSpeechRecognition();
 
   async function loadModel() {
-    const model = await tf.loadLayersModel("/static/model.json");
+    const model = await tf.loadLayersModel("/static/model/model.json");
     console.log("model loaded");
     setNlpModel(model);
   }
 
   useEffect(() => {
     loadModel();
-    fetch("/static/word_index.json")
+    fetch("/static/model/word_index.json")
       .then((response) => response.json())
       .then((data) => setWordIndex(data));
-    fetch("/static/word_token.json")
+    fetch("/static/model/word_token.json")
       .then((response) => response.json())
       .then((data) => setWordToken(data));
   }, []);
