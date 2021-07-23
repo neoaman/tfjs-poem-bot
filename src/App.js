@@ -16,7 +16,7 @@ import {
   VolumeDown,
   VolumeUp,
 } from "@material-ui/icons";
-import { IconButton, Typography } from "@material-ui/core";
+import { Divider, IconButton, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
 
 import { Slider, Grid } from "@material-ui/core";
@@ -172,6 +172,24 @@ function App() {
       </IconButton>
       <Typography color="primary">{transcript ? transcript : "-"}</Typography>
       <Typography color="secondary">{phrase ? phrase : "-"}</Typography>
+      <Divider style={{ marginTop: 80 }}></Divider>
+      <Typography>
+        The bot is trainned on 4 Nurcery Rhymes (One two three, Baa baa black
+        sheep, Twinkle twinkle little star, Humpty Dumpty)
+      </Typography>
+      <Typography>
+        Link for the rhyme file{" "}
+        <span style={{ color: "blue" }}>
+          https://gen.aman.solutions/static/poem.txt
+        </span>
+      </Typography>
+      <Typography color="secondary">
+        If you utter a fragment from the poem, bot will complete the full
+        sentence.
+      </Typography>
+      <Typography variant="subtitle1">
+        Give it a try saying "Humpty Dumpty"
+      </Typography>
     </div>
   );
 }
